@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sajuda's Special Fix! ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+  * { box-sizing: border-box; }
+
+  body {
+    background-color: #fce4ec; 
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .container {
+    background: white;
+    padding: 40px 30px; 
+    border-radius: 30px;
+    box-shadow: 0px 15px 45px rgba(0,0,0,0.1); 
+    max-width: 600px; 
+    width: 100%;
+    text-align: center;
+  }
+
+  h1 {
+    color: #d81b60; 
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5em; 
+    margin: 0;
+    white-space: nowrap; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; 
+  }
+  
+  .flower { font-size: 0.8em; }
+
+  p.subtitle {
+    color: #666;
+    font-size: 1.1em;
+    margin: 15px 0 30px 0;
+    font-style: italic;
+  }
+
+  .image-container {
+    width: 100%;
+    /* تم إلغاء الارتفاع الثابت لضمان عدم قص الصورة */
+    margin-bottom: 30px;
+    border-radius: 20px;
+    border: 4px solid #fff0f5;
+    overflow: hidden;
+    background-color: #f9f9f9;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto; /* يجعل الارتفاع يتناسب تلقائياً مع العرض الأصلي */
+    object-fit: contain; /* يضمن ظهور الصورة كاملة 100% بدون قص */
+    display: block;
+  }
+
+  .btn {
+    background: #d81b60; 
+    color: white;
+    padding: 15px 50px;
+    border: none;
+    border-radius: 50px; 
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s; 
+    font-weight: bold;
+    box-shadow: 0 6px 20px rgba(216, 27, 96, 0.3);
+  }
+
+  .btn:hover {
+    background-color: #b71c1c; 
+    transform: translateY(-3px);
+  }
+
+  #message {
+    display: none;
+    margin: 25px 0;
+    color: #d81b60;
+    font-size: 2.2em;
+    font-family: 'Dancing Script', cursive; 
+    animation: fadeIn 1s ease-in;
+  }
+
+  .audio-player {
+    margin-top: 30px;
+    background: #fff0f5; 
+    padding: 20px;
+    border-radius: 25px;
+    border: 2px dashed #ff85a2; 
+  }
+
+  audio {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h1><span class="flower">🌸</span>Prettiest Sajuda<span class="flower">🌸</span></h1>
+    
+    <div class="image-container">
+      <img src="5949762322379246685.jpg" alt="Beautiful Eyes View">
+    </div>
+
+    <button class="btn" onclick="runFix()">Click</button>
+
+    <div id="message">The most beautiful eyes shouldn't be upset anyway</div>
+
+    <div class="audio-player">
+      <p style="color:#d81b60; font-weight:bold; margin:0;"></p>
+      <audio id="myAudio" controls>
+        <source src="song.mp4" type="audio/mpeg">
+      </audio>
+    </div>
+  </div>
+
+  <script>
+    function runFix() {
+      document.getElementById('message').style.display = 'block';
+      const audio = document.getElementById('myAudio');
+      audio.play().catch(e => console.log("Play triggered"));
+    }
+  </script>
+
+</body>
+</html>
