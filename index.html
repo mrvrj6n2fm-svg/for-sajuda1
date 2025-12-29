@@ -70,6 +70,7 @@
 
   .btn {
     background: #d81b60; 
+    font-family: 'Dancing Script', cursive; 
     color: white;
     padding: 15px 50px;
     border: none;
@@ -123,7 +124,7 @@
       <img src="5949762322379246685.jpg" alt="Beautiful Eyes View">
     </div>
 
-    <button class="btn" onclick="runFix()">Click</button>
+    <button class="btn" onclick="runFix()">Just for you</button>
 
     <div id="message">The most beautiful eyes shouldn't be upset anyway</div>
 
@@ -137,7 +138,13 @@
 
   <script>
     function runFix() {
-      document.getElementById('message').style.display = 'block';
+      var x = document.getElementById("message");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+      
       const audio = document.getElementById('myAudio');
       audio.play().catch(e => console.log("Play triggered"));
     }
